@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Adventure Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>🏝️ The Mysterious Island</h1>
+            <div id="inventory-display">
+                <span>🎒 Inventory: </span>
+                <span id="inventory-list">Empty</span>
+            </div>
+        </header>
+        
+        <main>
+            <div id="story-display">
+                <h2 id="node-title">Loading...</h2>
+                <div id="story-text">Loading story...</div>
+            </div>
+            
+            <div id="actions-container">
+                <h3>What do you do?</h3>
+                <div id="action-buttons">
+                    <!-- Action buttons will be rendered here -->
+                </div>
+            </div>
+            
+            <div id="message-container">
+                <div id="message" class="hidden"></div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Use your wits to survive and find the treasure!</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
